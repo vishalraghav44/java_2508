@@ -1,0 +1,6 @@
+com\jcombat\service\ICombatService.class
+com\jcombat\service\CombatService.class
+com\jcombat\controller\DemoController.class
+com\jcombat\bean\UserBean.class
+com\jcombat\dao\ICombatDAO.class
+com\jcombat\dao\CombatDAO.class
