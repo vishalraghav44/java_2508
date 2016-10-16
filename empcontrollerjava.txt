@@ -1,0 +1,26 @@
+package com.raghav.brd4.controllers;
+
+import java.util.List;
+
+import com.nucleus.raghav.jdbctemp.controllers.ModelAndView;
+import com.nucleus.raghav.jdbctemp.controllers.RequestMapping;
+import com.nucleus.raghav.jdbctemp.dto.Student;
+import com.raghav.brd4.dao.EmpDAOImpl;
+import com.raghav.brd4.dto.Count;
+
+@Controller
+public class EmpController {
+	 @Autowired
+		EmpDAOImpl edi;
+	 
+	 @RequestMapping("/viewemp")
+		public ModelAndView viewemp(){
+			List<Count> list=edi.selectAll();
+			return new ModelAndView("viewemp","list",list);
+}
+	 @RequestMapping(value="/graph/${emp.dept_id}/${emp.count}")
+		public ModelAndView graph(){
+		 List<Count> list1=edi.selectAll();
+			return new ModelAndView("viewemp","list1",list1);
+}
+}

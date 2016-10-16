@@ -1,0 +1,17 @@
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>  
+   <%--  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  --%> 
+
+	 <h1>Employee Data</h1>
+	<table border="2" width="70%" cellpadding="2">
+	<tr><th>Department Id</th><th>Number Of Employees</th>
+    <c:forEach var="emp" items="${list}"> 
+    <tr>
+    <td>${emp.dept_id}</td>
+    <td>${emp.count}</td>
+    
+    </tr>
+    </c:forEach>
+    </table>
+  <br/>
+    <a href="graph/${emp.dept_id}/${emp.count}">Click Here For Graph</a> 
+    
